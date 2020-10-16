@@ -18,13 +18,6 @@ compare:
 counter:
     inc     rcx
 
-check:
-    cmp     BYTE[rdi + rcx], 0
-    je      return
-    cmp     BYTE[rsi + rcx], 0
-    je      return
-    jmp     compare
-
 return:
     mov     al, BYTE[rdi + rcx]
     mov     dl, BYTE[rsi + rcx]
@@ -34,3 +27,11 @@ return:
 error:
     mov     rax, -1
     ret
+
+
+check:
+    cmp     BYTE[rdi + rcx], 0
+    je      return
+    cmp     BYTE[rsi + rcx], 0
+    je      return
+    jmp     compare

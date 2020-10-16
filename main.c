@@ -6,7 +6,7 @@
 /*   By: yslati <yslati@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 16:47:21 by yslati            #+#    #+#             */
-/*   Updated: 2020/10/14 13:23:23 by yslati           ###   ########.fr       */
+/*   Updated: 2020/10/16 13:02:20 by yslati           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main()
 
 	str = malloc(sizeof(char) * 5);
 	int test = ft_read(20, dest, 10);
-	printf("%d", test);
+	//printf("%d", test);
 	//printf("%d\n", ft_strlen(NULL));
 	//printf("%d\n", ft_strlen("NULL"));
 	//printf("%d\n", ft_strlen(""));
@@ -40,19 +40,29 @@ int main()
 	//printf("%s|\n", ft_strcpy(NULL, "hello"));
 
 	//printf("%d\n", ft_strcmp("abe", "abe"));
-	//printf("%d\n", ft_strcmp("abex", "abec"));
+	//printf("%d\n", ft_strcmp("abex", "abea"));
 	//printf("%d\n", ft_strcmp("abex", NULL));
 	//printf("%d\n", ft_strcmp(NULL, "eve"));
+	//printf("%d\n", ft_strcmp("b", ""));        // problem
+	//printf("%d\n",    strcmp("b", ""));        // problem
 
 	//printf("%d\n", (int)ft_write(1, "NULL\n", 5));
+	//printf("%d\n", (int)write(1, "NULL\n", 5));
 	//printf("%d\n", (int)ft_write(1, NULL, 5));
+	//printf("%d\n", (int)write(1, NULL, 5));
 	//printf("%d\n", (int)ft_write(-1, "NULL\n", 5));
+	//printf("%d\n", (int)write(-1, "NULL\n", 5));
 	//printf("%d\n", (int)ft_write(42, "NULL\n", 5));
+	//printf("%d\n", (int)write(42, "NULL\n", 5));
 
 	//printf("%d | %s\n", (int)ft_read(1, str, 5), str);
+	//printf("%d | %s\n", (int)read(1, str, 5), str);
 	//printf("%d | %s\n", (int)ft_read(-1, str, 5), str);
+	//printf("%d | %s\n", (int)read(-1, str, 5), str);
 	//printf("%d | %s\n", (int)ft_read(42, str, 5), str);
+	//printf("%d | %s\n", (int)read(42, str, 5), str);
 	//printf("%d | %s\n", (int)ft_read(1, NULL, 5), str);
+	//printf("%d | %s\n", (int)read(1, NULL, 5), str);
 
 	//printf("%s\n", ft_strdup("Hello"));
 	//printf("%s\n", ft_strdup(NULL));

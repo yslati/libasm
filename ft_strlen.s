@@ -1,5 +1,6 @@
 	section	.text
 	global	_ft_strlen
+
 _ft_strlen:
 	xor		rcx, rcx
 	cmp		rdi, 0x00
