@@ -5,19 +5,16 @@ global		_ft_list_size
 _ft_list_size:
 	mov		rax, 1
 	mov		rcx, 8
-	cmp		[rdi + rcx],byte 0
-	je		_return
-	jmp		_size_up
+	cmp		[rdi + rcx], byte 0
+	je		return
 
-_size_up:
+size_up:
 	mov		rcx, 16
 	inc		rax
-	jmp		_check_size
 
-_check_size:
+check_size:
 	cmp		[rdi + rcx],byte 0
-	jne		_size_up
-	jmp		_return
+	jne		size_up
 
-_return:
+return:
 	ret

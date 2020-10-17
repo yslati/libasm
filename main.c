@@ -6,7 +6,7 @@
 /*   By: yslati <yslati@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 16:47:21 by yslati            #+#    #+#             */
-/*   Updated: 2020/10/16 13:02:20 by yslati           ###   ########.fr       */
+/*   Updated: 2020/10/17 09:40:43 by yslati           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,9 @@ int main()
 	//printf("%d | %s\n", (int)ft_read(1, NULL, 5), str);
 	//printf("%d | %s\n", (int)read(1, NULL, 5), str);
 
-	//printf("%s\n", ft_strdup("Hello"));
-	//printf("%s\n", ft_strdup(NULL));
-	//printf("%s\n", ft_strdup(""));
+	printf("%s\n", ft_strdup("Hello"));
+	printf("%s\n", ft_strdup(NULL));
+	printf("%s\n", ft_strdup(""));
 
 	return (0);
 }
