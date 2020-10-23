@@ -1,6 +1,7 @@
 section     .text
 
 global      _ft_read
+extern      ___error
 
 _ft_read:
     mov     rax, 0x02000003
@@ -9,5 +10,9 @@ _ft_read:
     ret
 
 return:
-    mov rax, -1
-    ret
+    push   rax
+        call   ___error
+        pop    rcx
+        mov    [rax], ecx
+        mov rax, -1
+        ret

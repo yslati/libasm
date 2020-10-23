@@ -11,7 +11,9 @@ _ft_strdup:
     mov		rbx, rdi
 	mov		rdi, rax
 	inc		rdi
+	sub		rsp, 40
 	call	_malloc
+	add		rsp, 40
 	cmp		rax, 0
 	je		return
 	mov		rsi, rbx
