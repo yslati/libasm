@@ -6,7 +6,7 @@
 /*   By: yslati <yslati@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 16:47:21 by yslati            #+#    #+#             */
-/*   Updated: 2020/10/23 14:15:39 by yslati           ###   ########.fr       */
+/*   Updated: 2020/10/24 10:57:59 by yslati           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,20 @@ int main()
 	//printf("%s|\n", ft_strcpy(NULL, NULL));
 	//printf("%s|\n", ft_strcpy(NULL, "hello"));
 
-	//printf("%d\n", ft_strcmp("abe", "abe"));
-	//printf("%d\n", ft_strcmp("abex", "abea"));
-	//printf("%d\n", ft_strcmp("abex", NULL));
-	//printf("%d\n", ft_strcmp(NULL, "eve"));
-	//printf("%d\n", ft_strcmp("b", ""));        // problem
-	//printf("%d\n",    strcmp("b", ""));        // problem
+	//printf("MY: %d\n", ft_strcmp("abe", "abe"));
+	//printf("O : %d\n",    strcmp("abe", "abe"));
+	//printf("MY: %d\n", ft_strcmp("ab", "abea"));
+	//printf("O : %d\n",    strcmp("ab", "abea"));
+	//printf("MY: %d\n", ft_strcmp("abe", "ab"));
+	//printf("O : %d\n",    strcmp("abe", "ab"));
+	//printf("MY: %d\n", ft_strcmp("abex", NULL));
+	//printf("O : %d\n",    strcmp("abex", NULL));   // segf
+	//printf("MY: %d\n", ft_strcmp(NULL, "eve"));
+	//printf("O : %d\n",    strcmp(NULL, "eve"));	 // segf
+	//printf("%d\n", ft_strcmp("b", ""));
+	//printf("%d\n",    strcmp("b", ""));
+	//printf("|M| ==> the return value of ft_strcmp is |%d|\n", ft_strcmp("\xff\xff", "\xff"));
+    //printf("|O| ==> the return value of    strcmp is |%d|\n\n",  strcmp("\xff\xff", "\xff"));
 
 	//printf("%d\n", (int)ft_write(1, "NULL\n", 5));
 	//printf("%d\n", (int)write(1, "NULL\n", 5));
@@ -64,7 +72,7 @@ int main()
 	//printf("%d | %s\n", (int)ft_read(1, NULL, 5), str);
 	//printf("%d | %s\n", (int)read(1, NULL, 5), str);
 
-	printf("%s\n", ft_strdup("Hello"));
+	//printf("%s\n", ft_strdup("Hello"));
 	//printf("%s\n", ft_strdup(NULL));
 	//printf("%s\n", ft_strdup(""));
 

@@ -29,6 +29,16 @@ return:
     mov     al, BYTE[rdi + rcx]
     mov     dl, BYTE[rsi + rcx]
     sub     rax, rdx
+    cmp     rax, 0
+    jg      grea
+    jl      less
+    ret
+
+less:
+    mov     rax, -1
+    ret
+grea:
+    mov     rax, 1
     ret
 
 error:
