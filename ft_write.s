@@ -9,8 +9,8 @@ _ft_write:
 
 return:
 	push   rax
-        call   ___error
-        pop    rcx
-        mov    [rax], ecx
-        mov rax, -1
-        ret
+    call   ___error
+    pop    rcx
+    mov    [rax], rcx
+    mov rax, -1
+    ret

@@ -6,7 +6,7 @@
 /*   By: yslati <yslati@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 15:37:00 by yslati            #+#    #+#             */
-/*   Updated: 2020/10/17 12:09:35 by yslati           ###   ########.fr       */
+/*   Updated: 2020/10/24 11:37:18 by yslati           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ typedef struct	s_list
     void			*data;
     struct s_list	*next;
 }				t_list;
+
 void	ft_list_push_front(t_list **begin_list, void *data);
 int		ft_list_size(t_list *list);
 void	ft_list_sort(t_list **begin_list, int (*cmp)());
@@ -71,14 +72,9 @@ int     main()
 	//ft_list_remove_if(&list1, "hello", &cmp);
 	//printf("After remove size: %d\n", ft_list_size(list1));
     
-	//printf("Before %s\n", list1->data);
-	// printf("%p\n", list1);
-	// printf("%p\n", list1->next);
-	// printf("%p\n", list2->next);
-	// printf("%p\n", list3->next);
-	// printf("%p\n", list4->next);
+	//printf("Before :%s\n", list1->data);
 	//ft_list_push_front(&list1, list4);
-	//printf("After %s\n", list1->data);
+	//printf("After :%s\n", list1->data);
 }
 
 /* 0x7fa951402700 */

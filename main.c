@@ -6,7 +6,7 @@
 /*   By: yslati <yslati@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 16:47:21 by yslati            #+#    #+#             */
-/*   Updated: 2020/10/24 10:57:59 by yslati           ###   ########.fr       */
+/*   Updated: 2020/10/25 10:03:30 by yslati           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+#include <errno.h>
+#include <fcntl.h>
 
 int			ft_strlen(char *str);
 char		*ft_strcpy(char *dst, char *src);
@@ -24,11 +26,11 @@ char		*ft_strdup(char *str);
 
 int main()
 {
-	char	*str;
+/* 	char	*str;
 	char	dest[10];
 
 	str = malloc(sizeof(char) * 5);
-	int test = ft_read(20, dest, 10);
+	int test = ft_read(20, dest, 10); */
 	//printf("%d", test);
 	//printf("%d\n", ft_strlen(NULL));
 	//printf("%d\n", ft_strlen("NULL"));
@@ -75,6 +77,26 @@ int main()
 	//printf("%s\n", ft_strdup("Hello"));
 	//printf("%s\n", ft_strdup(NULL));
 	//printf("%s\n", ft_strdup(""));
+	
+	char        *s = NULL;
+    int            bz;
+    ssize_t        n;
+    char        *s1="\xff";
+    char        *s2="\xffh";
+
+    bz = 40;
+
+    /* write */
+    int fd1 = open("./test1", O_CREAT|O_RDWR, S_IRUSR|S_IWUSR);
+    int fd2 = open("./test2", O_CREAT|O_RDWR, S_IRUSR|S_IWUSR);
+    n = ft_write(fd1, s, bz);
+    printf("\n|M| ==> the return value of ft_write is |%ld|\n", n);
+    printf("errno = |%d|\n", errno);
+    n =    write(fd2, s, bz);
+    printf("\n|O| ==> the return value of    write is |%ld|\n", n);
+    printf("errno = |%d|\n", errno);
+    close(fd1);
+    close(fd2);
 
 	return (0);
 }
