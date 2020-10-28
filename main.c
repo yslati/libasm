@@ -6,7 +6,7 @@
 /*   By: yslati <yslati@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 16:47:21 by yslati            #+#    #+#             */
-/*   Updated: 2020/10/25 10:03:30 by yslati           ###   ########.fr       */
+/*   Updated: 2020/10/28 10:31:59 by yslati           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ char		*ft_strdup(char *str);
 
 int main()
 {
-/* 	char	*str;
+	char	*str;
 	char	dest[10];
 
 	str = malloc(sizeof(char) * 5);
-	int test = ft_read(20, dest, 10); */
+	int test = ft_read(20, dest, 10);
 	//printf("%d", test);
 	//printf("%d\n", ft_strlen(NULL));
 	//printf("%d\n", ft_strlen("NULL"));
@@ -62,8 +62,8 @@ int main()
 	//printf("%d\n", (int)write(1, NULL, 5));
 	//printf("%d\n", (int)ft_write(-1, "NULL\n", 5));
 	//printf("%d\n", (int)write(-1, "NULL\n", 5));
-	//printf("%d\n", (int)ft_write(42, "NULL\n", 5));
-	//printf("%d\n", (int)write(42, "NULL\n", 5));
+	printf("%d\n", (int)ft_write(42, "bonjour", 7));
+	printf("%d\n", (int)write(42, "bonjour", 7));
 
 	//printf("%d | %s\n", (int)ft_read(1, str, 5), str);
 	//printf("%d | %s\n", (int)read(1, str, 5), str);
@@ -78,7 +78,7 @@ int main()
 	//printf("%s\n", ft_strdup(NULL));
 	//printf("%s\n", ft_strdup(""));
 	
-	char        *s = NULL;
+/* 	char        *s = NULL;
     int            bz;
     ssize_t        n;
     char        *s1="\xff";
@@ -86,7 +86,7 @@ int main()
 
     bz = 40;
 
-    /* write */
+    //    write
     int fd1 = open("./test1", O_CREAT|O_RDWR, S_IRUSR|S_IWUSR);
     int fd2 = open("./test2", O_CREAT|O_RDWR, S_IRUSR|S_IWUSR);
     n = ft_write(fd1, s, bz);
@@ -97,6 +97,7 @@ int main()
     printf("errno = |%d|\n", errno);
     close(fd1);
     close(fd2);
+	*/
 
 	return (0);
 }

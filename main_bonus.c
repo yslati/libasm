@@ -6,7 +6,7 @@
 /*   By: yslati <yslati@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 15:37:00 by yslati            #+#    #+#             */
-/*   Updated: 2020/10/24 11:37:18 by yslati           ###   ########.fr       */
+/*   Updated: 2020/10/28 10:37:52 by yslati           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct	s_list
 
 void	ft_list_push_front(t_list **begin_list, void *data);
 int		ft_list_size(t_list *list);
-void	ft_list_sort(t_list **begin_list, int (*cmp)());
+//void	ft_list_sort(t_list **begin_list, int (*cmp)());
 //void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)());
 
 int		cmp(void *s1, void *s2)
@@ -64,18 +64,11 @@ int     main()
 	list3->next = list4;
 	list4->next = NULL;
 
-	printf("%s |> %s |> %s\n", list1->data, list1->next->data, list1->next->next->data);
-	ft_list_sort(&list1, &cmp);
-	printf("\n%s |> %s |> %s\n", list1->data, list1->next->data, list1->next->next->data);
+
 	
-	//printf("\nBefore remove size: %d\n", ft_list_size(list1));
-	//ft_list_remove_if(&list1, "hello", &cmp);
-	//printf("After remove size: %d\n", ft_list_size(list1));
+	//printf("\nList Size: %d\n", ft_list_size(list1));
     
 	//printf("Before :%s\n", list1->data);
 	//ft_list_push_front(&list1, list4);
 	//printf("After :%s\n", list1->data);
 }
-
-/* 0x7fa951402700 */
-/* 0x7fa6024026e0 */

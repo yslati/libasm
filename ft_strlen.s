@@ -1,19 +1,20 @@
-	section	.text
-	global	_ft_strlen
+section			.text
+	
+	global		_ft_strlen
 
 _ft_strlen:
-	xor		rcx, rcx
-	cmp		rdi, 0x00
-	je		return
-	jmp		compare
+	xor			rcx, rcx
+	cmp			rdi, 0x00
+	je			return
+	jmp			compare
 
 increment:
-	inc		rcx
+	inc			rcx
 
 compare:
-	cmp		BYTE[rdi + rcx], 0
-	jne		increment
+	cmp			BYTE[rdi + rcx], 0
+	jne			increment
 
 return:
-	mov		rax, rcx
+	mov			rax, rcx
 	ret
